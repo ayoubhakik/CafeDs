@@ -1,6 +1,5 @@
 package metier.session;
 
-import java.util.Date;
 
 import javax.ejb.Remote;
 
@@ -9,5 +8,5 @@ import javax.ejb.Remote;
 public interface IAbonnementRemote {
 	
 	//pour effectuer le payement
-	public Boolean payerAbonnement(String numeroCart,String troixNbr,Date dateExpiration,Float montant);
+	public Boolean payerAbonnement(String numeroCart,String troixNbr,String dateExpiration,String montant);
 }

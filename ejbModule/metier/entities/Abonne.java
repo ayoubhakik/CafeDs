@@ -15,6 +15,7 @@ import javax.persistence.*;
 public class Abonne implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	private String username;
@@ -23,7 +24,7 @@ public class Abonne implements Serializable {
 	private Float montant;
 	private String numero;
 	private String cartNum;
-	private Date dateExpiration;
+	private String dateExpiration;
 	private String troisNbr;
 	private static final long serialVersionUID = 1L;
 
@@ -73,11 +74,11 @@ public class Abonne implements Serializable {
 	public void setCartNum(String cartNum) {
 		this.cartNum = cartNum;
 	}   
-	public Date getDateExpiration() {
+	public String getDateExpiration() {
 		return this.dateExpiration;
 	}
 
-	public void setDateExpiration(Date dateExpiration) {
+	public void setDateExpiration(String dateExpiration) {
 		this.dateExpiration = dateExpiration;
 	}   
 	public String getTroisNbr() {

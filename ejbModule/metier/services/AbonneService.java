@@ -18,8 +18,8 @@ public class AbonneService {
 	@WebMethod
 	public Boolean payerAbonnement(@WebParam(name="numeroCart")String numeroCart,
 						@WebParam(name="troixNbr")String troixNbr,
-						@WebParam(name="dateExpiration")Date dateExpiration,
-						@WebParam(name="montant")Float montant) {
+						@WebParam(name="dateExpiration")String dateExpiration,
+						@WebParam(name="montant")String montant) {
 		return metier.payerAbonnement(numeroCart, troixNbr, dateExpiration, montant);
 		}
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="">
+	<ui:define name="header">
+	    Gestion des Abonnes
+	</ui:define>
+	<h:dataTable value="#{Abonnes}" var="o">
+
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">nom Agent</f:facet>
+    				<!-- row record -->
+    				#{o.nom}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">prenom Agent</f:facet>
+    				#{o.prenom}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Montant</f:facet>
+    				#{o.montant}
+    			</h:column>
+    			
+    			<h:column>
+    				<f:facet name="header">Telephone</f:facet>
+    				#{o.numero}
+    			</h:column>
+    			<h:column>
+    				<a href="/delete/#{o.id}">delete</a>
+    			</h:column>
+    			
+    		
+    		</h:dataTable>
+</ui:composition>
+</html>
